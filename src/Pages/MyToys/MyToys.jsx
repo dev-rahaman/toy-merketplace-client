@@ -45,11 +45,21 @@ const MyToys = () => {
     });
   };
 
+  const handleSorting = () => {
+    console.log("ASCENDING AND DESCENDING");
+  };
+
   return (
     <div>
       <h2 style={{ textAlign: "center", fontSize: "40px", marginTop: "30px" }}>
         My Toys
       </h2>
+      <button
+        onClick={handleSorting}
+        style={{ fontSize: "20px", padding: "10px" }}
+      >
+        Sort
+      </button>
       <table>
         <tr>
           <th>Seller Name </th>
