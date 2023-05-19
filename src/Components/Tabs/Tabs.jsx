@@ -48,29 +48,38 @@ const Tabs = () => {
 
   return (
     <div>
-      <button
-        style={{ fontSize: "20px", padding: "10px" }}
-        onClick={() => handleTab("Programmable")}
-        className={activeTab === "Programmable" ? "ActiveTabST" : ""}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "50px",
+        }}
       >
-        Programmable
-      </button>
+        <button
+          style={{ fontSize: "20px", padding: "10px" }}
+          onClick={() => handleTab("Programmable")}
+          className={activeTab === "Programmable" ? "ActiveTabST" : ""}
+        >
+          Programmable
+        </button>
 
-      <button
-        style={{ fontSize: "20px", padding: "10px" }}
-        onClick={() => handleTab("Transformable")}
-        className={activeTab === "Transformable" ? "ActiveTabST" : ""}
-      >
-        Transformable
-      </button>
+        <button
+          style={{ fontSize: "20px", padding: "10px" }}
+          onClick={() => handleTab("Transformable")}
+          className={activeTab === "Transformable" ? "ActiveTabST" : ""}
+        >
+          Transformable
+        </button>
 
-      <button
-        style={{ fontSize: "20px", padding: "10px" }}
-        onClick={() => handleTab("Educational")}
-        className={activeTab === "Educational" ? "ActiveTabST" : ""}
-      >
-        Robo Drones
-      </button>
+        <button
+          style={{ fontSize: "20px", padding: "10px" }}
+          onClick={() => handleTab("Educational")}
+          className={activeTab === "Educational" ? "ActiveTabST" : ""}
+        >
+          Robo Drones
+        </button>
+      </div>
       <div>
         {activeTab === "Programmable" && Programmable}
         {activeTab === "Transformable" && Transformable}

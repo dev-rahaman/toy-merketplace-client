@@ -9,7 +9,7 @@ import useTitle from "../../Components/Title/Title";
 const options = [
   { value: "Programmable", label: "Programmable" },
   { value: "Transformable", label: "Transformable" },
-  { value: "Robo Drones", label: "Robo Drones" },
+  { value: "Educational", label: "Educational" },
 ];
 
 const AddToy = () => {

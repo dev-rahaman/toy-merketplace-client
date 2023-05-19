@@ -70,7 +70,7 @@ const UpdateToy = () => {
         if (data.modifiedCount > 0) {
           form.reset();
           if (data.modifiedCount > 0) {
-            Swal.fire("Updated!", "Your file has been Updated.", "success");
+            Swal.fire("Updated!", "Your Toy has been Updated.", "success");
           }
         }
       });
@@ -85,10 +85,19 @@ const UpdateToy = () => {
             <label>Toy Name:</label>
             <input
               type="text"
-              placeholder="Enter Toy Name"
+              placeholder="Photo URL"
               name="name"
               required
               defaultValue={name}
+            />
+            <br />
+            <label>Photo URL:</label>
+            <input
+              type="text"
+              placeholder="Enter Toy Photo URL"
+              name="toyPhoto"
+              required
+              defaultValue={photo}
             />
             <br />
             <label>Sub Category:</label>
@@ -98,7 +107,6 @@ const UpdateToy = () => {
                 onChange={setSelectedOption}
                 options={options}
                 name="subcategory"
-                required
                 defaultInputValue={subcategory}
               />
             </div>
