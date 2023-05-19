@@ -1,0 +1,108 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000d5;
+}
+.navbar-logo {
+  color: #f9d72f;
+}
+.menu__logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.menu__logo a {
+  text-decoration: none;
+}
+
+.menu__toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #f9cb2d;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  margin-left: 2rem;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 20px;
+  color: #f9cb2d;
+}
+
+.btnMenu button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.positionTwo {
+  position: relative;
+}
+
+.positionONe {
+  position: absolute;
+  background-color: #f9cb2d;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  width: 350px;
+  right: 0;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  .positionONe {
+    right: -270px;
+  }
+  .menu__logo {
+    order: 1;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .menu__toggle {
+    display: block;
+    position: relative;
+  }
+
+  .menu__list {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    z-index: 1;
+    padding: 1rem;
+    background-color: #685c36;
+    position: absolute;
+    top: 55px;
+    right: 300px;
+  }
+
+  .btnMenu {
+    order: 4;
+    font-size: 15px;
+  }
+
+  .menu__item {
+    margin: 1rem 0;
+  }
+
+  .menu__list--open {
+    display: flex;
+  }
+}
