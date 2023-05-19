@@ -1,22 +1,32 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import viewDetails from "../../../public/viewDetails.png";
 import useTitle from "../../Components/Title/Title";
 
 const AllToys = () => {
-  //   fetch("https://alive-baby-server.vercel.app/alltoys", {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify()
-  //   })
-  //     .then((res) => res.jos())
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
+  const [allToy, setAllToy] = useState([]);
+  useEffect(() => {
+    fetch("https://alive-baby-server.vercel.app/alltoys")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToy(data);
+        // console.log(data);
+      });
+  }, []);
+
+  const [searchText, setSearchText] = useState();
+  const handleSearchBtn = () => {
+    fetch(`http://localhost:8080/toySearchByName/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToy(data);
+        // console.log(data);
+      });
+  };
+
   const loadData = useLoaderData();
+
   useTitle("All Toys");
   const titleStyle = {
     backgroundColor: "red",
@@ -27,6 +37,30 @@ const AllToys = () => {
       <h2 style={{ textAlign: "center", fontSize: "40px", marginTop: "30px" }}>
         All Toys
       </h2>
+      <div
+        style={{
+          marginTop: "20px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <input
+          onChange={(e) => setSearchText(e.target.value)}
+          type="Search"
+          placeholder="Search By Toy Name"
+          name="search"
+          required
+          style={{ padding: "20px", fontSize: "20px", width: "40    0px" }}
+        />
+        <button
+          onClick={handleSearchBtn}
+          style={{ padding: "20px", fontSize: "20px", cursor: "pointer" }}
+        >
+          Search
+        </button>
+      </div>
+
       <table>
         <tr>
           <th>Seller Name </th>
@@ -36,7 +70,7 @@ const AllToys = () => {
           <th>Quantity</th>
           <th>Action</th>
         </tr>
-        {loadData.map((toy) => (
+        {allToy.map((toy) => (
           <>
             <tr>
               <td>{toy.sellerName}</td>
@@ -72,13 +106,3 @@ const AllToys = () => {
 };
 
 export default AllToys;
-{
-  /* <img
-src={viewDetails}
-alt=""
-style={{
-  width: "25px",
-  height: "25px",
-}}
-/> */
-}

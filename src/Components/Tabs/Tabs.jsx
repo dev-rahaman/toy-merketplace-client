@@ -35,7 +35,7 @@ const Tabs = () => {
         onClick={() => handleTab("Educational")}
         className={activeTab === "Educational" ? "ActiveTabST" : ""}
       >
-        Educational
+        Robo Drones
       </button>
     </div>
   );
