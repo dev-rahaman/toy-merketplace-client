@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 import useTitle from "../../Components/Title/Title";
 
 const MyToys = () => {
+  useTitle("My Toys");
   const { user } = useContext(AuthContext);
   const [emailData, setEmailData] = useState([]);
-  useTitle("My Toys");
+
   const url = `https://alive-baby-server.vercel.app/mytoys/${user?.email}`;
   useEffect(() => {
     fetch(url)
@@ -58,39 +59,40 @@ const MyToys = () => {
           <th>Quantity</th>
           <th style={{ textAlign: "center" }}>Action</th>
         </tr>
-        {emailData.map((toy) => (
-          <>
-            <tr>
-              <td>{toy.sellerName}</td>
-              <td>{toy.name}</td>
-              <td>{toy.subcategory}</td>
-              <td>{toy.price}</td>
-              <td>{toy.quantity}</td>
-              <td style={{ textAlign: "center" }}>
-                <FaTrash
-                  onClick={() => handleDelete(toy._id)}
-                  style={{
-                    width: "20px",
-                    height: "30px",
-                    color: "#ef8d8d",
-                    marginRight: "20px",
-                    cursor: "pointer",
-                  }}
-                />
-                <Link to={`/updatetoy/${toy._id}`}>
-                  <FaEdit
+        {emailData &&
+          emailData.map((toy) => (
+            <>
+              <tr>
+                <td>{toy.sellerName}</td>
+                <td>{toy.name}</td>
+                <td>{toy.subcategory}</td>
+                <td>{toy.price}</td>
+                <td>{toy.quantity}</td>
+                <td style={{ textAlign: "center" }}>
+                  <FaTrash
+                    onClick={() => handleDelete(toy._id)}
                     style={{
-                      width: "25px",
+                      width: "20px",
                       height: "30px",
-                      color: "#139EF8",
+                      color: "#ef8d8d",
+                      marginRight: "20px",
                       cursor: "pointer",
                     }}
                   />
-                </Link>
-              </td>
-            </tr>
-          </>
-        ))}
+                  <Link to={`/updatetoy/${toy._id}`}>
+                    <FaEdit
+                      style={{
+                        width: "25px",
+                        height: "30px",
+                        color: "#139EF8",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </Link>
+                </td>
+              </tr>
+            </>
+          ))}
       </table>
     </div>
   );

@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { useLoaderData, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import viewDetails from "../../../public/viewDetails.png";
 import useTitle from "../../Components/Title/Title";
 
 const AllToys = () => {
+  useTitle("All Toys");
   const [allToy, setAllToy] = useState([]);
   useEffect(() => {
     fetch("https://alive-baby-server.vercel.app/alltoys")
@@ -17,19 +18,12 @@ const AllToys = () => {
 
   const [searchText, setSearchText] = useState();
   const handleSearchBtn = () => {
-    fetch(`http://localhost:8080/toySearchByName/${searchText}`)
+    fetch(`https://alive-baby-server.vercel.app/toySearchByName/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         setAllToy(data);
         // console.log(data);
       });
-  };
-
-  const loadData = useLoaderData();
-
-  useTitle("All Toys");
-  const titleStyle = {
-    backgroundColor: "red",
   };
 
   return (
@@ -63,6 +57,7 @@ const AllToys = () => {
 
       <table>
         <tr>
+          <td>#</td>
           <th>Seller Name </th>
           <th>Toy Name</th>
           <th>Sub-category</th>
@@ -70,9 +65,10 @@ const AllToys = () => {
           <th>Quantity</th>
           <th>Action</th>
         </tr>
-        {allToy.map((toy) => (
+        {allToy.map((toy, idx) => (
           <>
             <tr>
+              <td>{idx + 1}</td>
               <td>{toy.sellerName}</td>
               <td>{toy.name}</td>
               <td>{toy.subcategory}</td>
@@ -83,7 +79,6 @@ const AllToys = () => {
                   <button
                     title="View Details"
                     style={{
-                      titleStyle,
                       backgroundImage: `url(${viewDetails})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",

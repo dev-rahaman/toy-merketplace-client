@@ -30,9 +30,6 @@ const UpdateToy = () => {
   } = loadData;
 
   const [selectedOption, setSelectedOption] = useState(null);
-  const [update, setUpdate] = useState();
-
-  //   console.log(loadData);
 
   const handleToyUpdate = (e) => {
     e.preventDefault();
@@ -49,17 +46,17 @@ const UpdateToy = () => {
 
     const updatedToy = {
       name: name,
-      _id: _id,
       subcategory: subcategory,
       price: price,
       rating: rating,
       sellerName: sellerName,
       email: email,
       photo: photo,
-      quantity: quantity,
       description: description,
+      quantity: quantity,
     };
 
+    // updated data on server
     fetch(`https://alive-baby-server.vercel.app/updatetoy/${_id}`, {
       method: "PUT",
       headers: {
@@ -72,7 +69,9 @@ const UpdateToy = () => {
         console.log(data);
         if (data.modifiedCount > 0) {
           form.reset();
-          Swal.fire("Updated!", "Your file has been ", "success");
+          if (data.modifiedCount > 0) {
+            Swal.fire("Updated!", "Your file has been Updated.", "success");
+          }
         }
       });
   };
@@ -83,15 +82,6 @@ const UpdateToy = () => {
       <form onSubmit={handleToyUpdate}>
         <div className="flex">
           <div style={{ width: "50%", margin: "0 20px" }}>
-            <label>Toy _id:</label>
-            <input
-              type="text"
-              placeholder="Enter Toy Name"
-              name="_id"
-              required
-              defaultValue={_id}
-            />
-            <br />
             <label>Toy Name:</label>
             <input
               type="text"
@@ -169,7 +159,6 @@ const UpdateToy = () => {
             />
             <label>Description</label>
             <textarea
-              id=""
               rows="10"
               type="text"
               name="description"
