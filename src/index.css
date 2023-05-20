@@ -230,7 +230,60 @@ main {
 .req-rom button:hover {
   background-color: #0056b3;
 }
-/* REQUESTCALL */
+/* REQUEST A PRO SELLER */
+
+/* AOS */
+.AOS-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fd3c5e;
+  padding: 20px;
+  height: 500px;
+}
+
+.AOS-content-left {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  line-height: 40px;
+}
+
+.AOS-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #b1e64d;
+  padding: 20px;
+  height: 500px;
+}
+.AOS-content-right {
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  padding: 20px;
+  line-height: 40px;
+}
+
+/* AOS */
+
 /* ======================================================================= */
-@media (min-width: 576px) {
+@media screen and (max-width: 768px) {
+  /* FORM  */
+  .req-rom {
+    width: 80%;
+  }
+  /* FORM  */
+  .AOS-left {
+    display: block;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .AOS-right {
+    display: block;
+    height: auto;
+    padding-top: 50px;
+  }
 }

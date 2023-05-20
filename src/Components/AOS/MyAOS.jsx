@@ -6,6 +6,7 @@ import "aos/dist/aos.js";
 import man from "../../../public/man.png";
 import robot2 from "../../../public/robot2.png";
 AOS.init();
+
 const polygonClipPath = "polygon(0 0, 100% 0, 100% 92%, 0 100%)";
 const polygonClipPath2 = "polygon(0 8%, 100% 0, 100% 100%, 0 100%)";
 
@@ -18,29 +19,18 @@ const MyAOS = () => {
         >
           About
         </h2>
-        {/* left */}
+        {/* first */}
         <div
           data-aos="fade-left"
+          className="AOS-left"
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-around",
-            backgroundColor: "#FD3C5E",
-            height: "500px",
             clipPath: polygonClipPath,
           }}
         >
-          <div>
+          <div style={{ textAlign: "center" }}>
             <img src={man} alt="" width={"300px"} />
           </div>
-          <div
-            style={{
-              width: "700px",
-              color: "#fff",
-              fontSize: "20px",
-              lineHeight: "40px",
-            }}
-          >
+          <div className="AOS-content-left">
             <p>
               Robot Toy: Unlocking Imagination and Fun! 🤖✨ Experience endless
               excitement with our interactive Robot Toy. Its sleek design and
@@ -54,27 +44,17 @@ const MyAOS = () => {
             </p>
           </div>
         </div>
-        {/* right  */}
+
+        {/* Second  */}
+
         <div
           data-aos="fade-right"
+          className="AOS-right"
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-around",
-            backgroundColor: "#B0E54C",
-            height: "500px",
-            marginTop: "50px",
             clipPath: polygonClipPath2,
           }}
         >
-          <div
-            style={{
-              width: "700px",
-              color: "#000",
-              fontSize: "20px",
-              lineHeight: "40px",
-            }}
-          >
+          <div className="AOS-content-right">
             <p>
               Unlock a World of Wonder with Our Robotic Companion! 🤖✨
               Introducing our Robot Toy, a gateway to boundless adventures and
@@ -88,7 +68,7 @@ const MyAOS = () => {
               incredible Robot Toy!
             </p>
           </div>
-          <div>
+          <div style={{ textAlign: "center" }}>
             <img src={robot2} alt="" width={"300px"} />
           </div>
         </div>

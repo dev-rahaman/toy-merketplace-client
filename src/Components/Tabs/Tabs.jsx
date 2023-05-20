@@ -55,24 +55,18 @@ const Tabs = () => {
           alignItems: "center",
           justifyContent: "center",
           marginTop: "100px",
-          position: "relative",
-          bottom: "5px",
         }}
       >
         <button
-          // style={{ fontSize: "20px", padding: "10px" }}
           style={{
             clipPath: "polygon(11% 0, 89% 0, 100% 100%, 0 100%",
-            fontSize: "20px",
-            padding: "10px 70px",
-            borderBottom: "10px solid red",
-            opacity: "999",
-            position: "absolute",
-            top: "-50px",
-            left: "350px",
+            fontSize: "15px",
+            padding: "10px 30px",
           }}
           onClick={() => handleTab("Programmable")}
-          className={activeTab === "Programmable" ? "ActiveTabST" : ""}
+          className={
+            activeTab === "Programmable" ? "ActiveTabST" : "tab-button-one"
+          }
         >
           Programmable
         </button>
@@ -80,13 +74,8 @@ const Tabs = () => {
         <button
           style={{
             clipPath: "polygon(11% 0, 89% 0, 100% 100%, 0 100%",
-            fontSize: "20px",
+            fontSize: "15px",
             padding: "10px 30px",
-            borderBottom: "10px solid red",
-            opacity: "777",
-            position: "absolute",
-            top: "-50px",
-            left: "600px",
           }}
           onClick={() => handleTab("Transformable")}
           className={activeTab === "Transformable" ? "ActiveTabST" : ""}
@@ -97,13 +86,8 @@ const Tabs = () => {
         <button
           style={{
             clipPath: "polygon(11% 0, 89% 0, 100% 100%, 0 100%",
-            fontSize: "20px",
-            padding: "10px 30px",
-            opacity: "600",
-            borderBottom: "10px solid red",
-            position: "absolute",
-            top: "-50px",
-            left: "770px",
+            fontSize: "15px",
+            padding: "10px 30px ",
           }}
           onClick={() => handleTab("Educational")}
           className={activeTab === "Educational" ? "ActiveTabST" : ""}
