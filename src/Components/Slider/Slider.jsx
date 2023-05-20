@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "./Slider.css";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,15 +9,12 @@ const Slider = () => {
   const sliderImages = [
     {
       image: "https://i.postimg.cc/jqfjpw0r/toy8.jpg",
-      caption: "Homemade Margherita Pizza 2",
     },
     {
       image: "https://i.postimg.cc/qMd74J46/toy7.jpg",
-      caption: "Spicy Chicken Curry 1",
     },
     {
       image: "https://i.postimg.cc/3Jbb2RNd/toy10.jpg",
-      caption: "Bacon Wrapped Dates 3",
     },
   ];
 
@@ -62,10 +60,56 @@ const Slider = () => {
         </div>
         <div className="slider-controls">
           <button className="slider-control" onClick={leftSlide}>
-            &lt;
+            {/* <FaArrowAltCircleLeft /> */}
+            <svg
+              stroke="currentColor"
+              fill="none"
+              strokeWidth="0"
+              viewBox="0 0 24 24"
+              className="h-5 w-5 text-white dark:text-gray-800 sm:h-6 sm:w-6"
+              height="50px"
+              width="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{
+                color: "#fff",
+                backgroundColor: "#293341",
+                padding: "10px",
+                borderRadius: "50px",
+              }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
           </button>
           <button className="slider-control" onClick={rightSlide}>
-            &gt;
+            {/* <FaArrowAltCircleRight /> */}
+            <svg
+              stroke="currentColor"
+              fill="none"
+              strokeWidth="0"
+              viewBox="0 0 24 24"
+              className="h-5 w-5 text-white dark:text-gray-800 sm:h-6 sm:w-6"
+              height="50px"
+              width="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{
+                color: "#fff",
+                backgroundColor: "#293341",
+                padding: "10px",
+                borderRadius: "50px",
+              }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
           </button>
         </div>
         <div className="dot-container">

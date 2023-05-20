@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
-const RequestCallback = () => {
+const RequestPro = () => {
   const { user } = useContext(AuthContext);
 
   const handleMessage = (e) => {
@@ -14,7 +14,7 @@ const RequestCallback = () => {
     const phone = form.phone.value;
     const newMessage = { name, email, phone };
 
-    fetch("http://localhost:8080/message", {
+    fetch("https://alive-baby-server.vercel.app/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const RequestCallback = () => {
   return (
     <>
       <h2 style={{ fontSize: "40px", textAlign: "center", marginTop: "20px" }}>
-        Send A Message
+        Request A Pro Seller
       </h2>
       <form onSubmit={handleMessage} className="req-rom">
         <div className="form-group">
@@ -78,4 +78,4 @@ const RequestCallback = () => {
   );
 };
 
-export default RequestCallback;
+export default RequestPro;

@@ -75,6 +75,9 @@ const Register = () => {
     <div className="login-container">
       <h1>Please Create an Account</h1>
       <form onSubmit={handleRegisterFormSubmit}>
+        <label>First Name:</label>
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <br />
         <label>Email:</label>
         <input type="email" name="email" placeholder="Enter Email" required />
         <br />
@@ -119,12 +122,6 @@ const Register = () => {
           placeholder="Confirm Password"
           required
         />
-        <br />
-        <label>First Name:</label>
-        <input type="text" name="firstName" placeholder="First Name" required />
-        <br />
-        <label>Last Name:</label>
-        <input type="text" name="lastName" placeholder="Last Name" required />
         <br />
         <label>Photo URL</label>
         <input type="text" name="photo" placeholder="Photo URL" required />
