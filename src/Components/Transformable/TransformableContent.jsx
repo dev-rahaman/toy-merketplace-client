@@ -1,21 +1,29 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-
 import React, { useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const TransformableContent = ({ card }) => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   const { _id, toyPhoto, name, price, rating, description } = card;
 
   const handleViewDetails = () => {
-    console.log("clicked");
     if (user) {
-      Navigate(`/toy/${_id}`);
+      navigate(`/toy/${_id}`);
     } else {
-      toast("You have to log in first to view details");
+      Swal.fire({
+        title: "You have to log in first to view details",
+        showClass: {
+          popup: "animate__animated animate__fadeInDown",
+        },
+        hideClass: {
+          popup: "animate__animated animate__fadeOutUp",
+        },
+      });
+      navigate(`/login`);
     }
   };
 
@@ -26,11 +34,7 @@ const TransformableContent = ({ card }) => {
       <p className="rating">Rating: {rating}</p>
       <p className="price">Price: {price}</p>
       <p>{description}</p>
-
-      {/* <Link to={`/toy/${_id}`}> */}
       <button onClick={handleViewDetails}>View Details</button>
-      {/* </Link> */}
-      {/* toast("You have to log in first to view details") */}
     </div>
   );
 };
