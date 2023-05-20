@@ -3,7 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #000000d5;
+  background-color: #073453;
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
 }
 .navbar-logo {
   color: #f9d72f;

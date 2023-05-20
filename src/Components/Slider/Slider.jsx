@@ -60,7 +60,6 @@ const Slider = () => {
         </div>
         <div className="slider-controls">
           <button className="slider-control" onClick={leftSlide}>
-            {/* <FaArrowAltCircleLeft /> */}
             <svg
               stroke="currentColor"
               fill="none"
@@ -86,7 +85,6 @@ const Slider = () => {
             </svg>
           </button>
           <button className="slider-control" onClick={rightSlide}>
-            {/* <FaArrowAltCircleRight /> */}
             <svg
               stroke="currentColor"
               fill="none"

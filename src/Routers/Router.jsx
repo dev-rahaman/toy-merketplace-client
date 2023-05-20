@@ -13,6 +13,8 @@ import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 import Error from "../Pages/Error.jsx/Error";
 import PrivateRoute from "./PrivateRoute";
 import SingleToy from "../Pages/SignleToy/SingleToy";
+import Banner from "../Components/Banner/Banner";
+import TextSlider from "../Components/TextSlider/TextSlider";
 
 const Router = createBrowserRouter([
   {
@@ -74,6 +76,14 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/banner",
+        element: <Banner></Banner>,
+      },
+      {
+        path: "/textslider",
+        element: <TextSlider></TextSlider>,
       },
     ],
   },

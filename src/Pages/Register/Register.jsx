@@ -11,9 +11,7 @@ const Register = () => {
   useTitle("Register");
   const [showPass, setShowPass] = useState("password");
   const [error, setError] = useState("");
-  const { user, createUser, updateUser } = useContext(AuthContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { createUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();

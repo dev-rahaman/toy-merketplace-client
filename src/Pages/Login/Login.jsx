@@ -6,12 +6,9 @@ import { FaGoogle } from "react-icons/fa";
 import useTitle from "../../Components/Title/Title";
 
 const Login = () => {
-  const { loginUser, GoogleSignIn } = useContext(AuthContext);
   useTitle("Login");
+  const { loginUser, GoogleSignIn } = useContext(AuthContext);
   const [showPass, setShowPass] = useState("password");
-  //   const [email, setEmail] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [lodging, setLodging] = useState(true);
   const [error, setError] = useState("");
 
   const navigate = useNavigate();

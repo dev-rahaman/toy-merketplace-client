@@ -5,8 +5,8 @@ import viewDetails from "../../../public/viewDetails.png";
 import useTitle from "../../Components/Title/Title";
 
 const AllToys = () => {
-  const [searchText, setSearchText] = useState();
   useTitle("All Toys");
+  const [searchText, setSearchText] = useState();
   const [allToy, setAllToy] = useState([]);
   useEffect(() => {
     fetch("https://alive-baby-server.vercel.app/alltoys")
