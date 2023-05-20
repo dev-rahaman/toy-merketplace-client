@@ -5,6 +5,7 @@ import Tabs from "../../Components/Tabs/Tabs";
 import PhotoGallery from "../../Components/PhotoGellary/PhotoGallery";
 import useTitle from "../../Components/Title/Title";
 import MyAOS from "../../Components/AOS/MyAOS";
+import RequestCallback from "../../Components/RequestCallback/RequestCallback";
 
 const Home = () => {
   useTitle("Home");
@@ -14,6 +15,7 @@ const Home = () => {
       <Tabs></Tabs>
       <PhotoGallery></PhotoGallery>
       <MyAOS></MyAOS>
+      <RequestCallback></RequestCallback>
     </div>
   );
 };

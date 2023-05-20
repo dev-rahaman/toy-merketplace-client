@@ -13,7 +13,6 @@ import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 import Error from "../Pages/Error.jsx/Error";
 import PrivateRoute from "./PrivateRoute";
 import SingleToy from "../Pages/SignleToy/SingleToy";
-import RequestCallback from "../Components/RequestCallback/RequestCallback";
 
 const Router = createBrowserRouter([
   {
@@ -75,10 +74,6 @@ const Router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
-      },
-      {
-        path: "/req",
-        element: <RequestCallback></RequestCallback>,
       },
     ],
   },
