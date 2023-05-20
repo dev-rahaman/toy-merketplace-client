@@ -5,6 +5,7 @@ import viewDetails from "../../../public/viewDetails.png";
 import useTitle from "../../Components/Title/Title";
 
 const AllToys = () => {
+  const [searchText, setSearchText] = useState();
   useTitle("All Toys");
   const [allToy, setAllToy] = useState([]);
   useEffect(() => {
@@ -16,8 +17,8 @@ const AllToys = () => {
       });
   }, []);
 
-  const [searchText, setSearchText] = useState();
-  const handleSearchBtn = () => {
+  const handleSearchBtn = (e) => {
+    e.preventDefault();
     fetch(`https://alive-baby-server.vercel.app/toySearchByName/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
@@ -39,63 +40,66 @@ const AllToys = () => {
           justifyContent: "center",
         }}
       >
-        <input
-          onChange={(e) => setSearchText(e.target.value)}
-          type="Search"
-          placeholder="Search By Toy Name"
-          name="search"
-          required
-          style={{ padding: "20px", fontSize: "20px", width: "40    0px" }}
-        />
-        <button
-          onClick={handleSearchBtn}
-          style={{ padding: "20px", fontSize: "20px", cursor: "pointer" }}
-        >
-          Search
-        </button>
+        <form onSubmit={handleSearchBtn}>
+          <input
+            onChange={(e) => setSearchText(e.target.value)}
+            type="Search"
+            placeholder="Search By Toy Name"
+            name="search"
+            required
+            style={{ padding: "20px", fontSize: "20px", width: "40    0px" }}
+          />
+          <button
+            style={{ padding: "20px", fontSize: "20px", cursor: "pointer" }}
+          >
+            Search
+          </button>
+        </form>
       </div>
 
-      <table>
-        <tr>
-          <td>#</td>
-          <th>Seller Name </th>
-          <th>Toy Name</th>
-          <th>Sub-category</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Action</th>
-        </tr>
-        {allToy.map((toy, idx) => (
-          <>
-            <tr>
-              <td>{idx + 1}</td>
-              <td>{toy.sellerName}</td>
-              <td>{toy.name}</td>
-              <td>{toy.subcategory}</td>
-              <td>{toy.price}</td>
-              <td>{toy.quantity}</td>
-              <td>
-                <Link to={`/toy/${toy._id}`}>
-                  <button
-                    title="View Details"
-                    style={{
-                      backgroundImage: `url(${viewDetails})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      width: "25px",
-                      height: "25px",
-                      border: "none",
-                      outline: "none",
-                      cursor: "pointer",
-                    }}
-                  ></button>
-                </Link>
-              </td>
-            </tr>
-          </>
-        ))}
-      </table>
+      <div className="table-container">
+        <table>
+          <tr>
+            <td>#</td>
+            <th>Seller Name </th>
+            <th>Toy Name</th>
+            <th>Sub-category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+          {allToy.map((toy, idx) => (
+            <>
+              <tr>
+                <td>{idx + 1}</td>
+                <td>{toy.sellerName}</td>
+                <td>{toy.name}</td>
+                <td>{toy.subcategory}</td>
+                <td>{toy.price}</td>
+                <td>{toy.quantity}</td>
+                <td>
+                  <Link to={`/toy/${toy._id}`}>
+                    <button
+                      title="View Details"
+                      style={{
+                        backgroundImage: `url(${viewDetails})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        width: "25px",
+                        height: "25px",
+                        border: "none",
+                        outline: "none",
+                        cursor: "pointer",
+                      }}
+                    ></button>
+                  </Link>
+                </td>
+              </tr>
+            </>
+          ))}
+        </table>
+      </div>
     </div>
   );
 };
