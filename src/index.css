@@ -266,6 +266,10 @@ main {
   padding: 20px;
   line-height: 40px;
 }
+.AOS-container {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
 /* AOS */
 

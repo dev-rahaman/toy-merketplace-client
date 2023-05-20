@@ -13,7 +13,7 @@ const polygonClipPath2 = "polygon(0 8%, 100% 0, 100% 100%, 0 100%)";
 const MyAOS = () => {
   return (
     <>
-      <div>
+      <div className="AOS-container">
         <h2
           style={{ fontSize: "40px", textAlign: "center", marginTop: "20px" }}
         >

@@ -88,7 +88,7 @@ const AddToy = () => {
             />
             <br />
             <label>Sub Category:</label>
-            <div className="App">
+            <div className="select">
               <Select
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
@@ -149,7 +149,7 @@ const AddToy = () => {
             ></textarea>
           </div>
         </div>
-        <button type="submit">Add Toy</button>
+        <button type="submit">Add A Toy</button>
       </form>
     </div>
   );
