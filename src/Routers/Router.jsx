@@ -13,7 +13,7 @@ import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 import Error from "../Pages/Error.jsx/Error";
 import PrivateRoute from "./PrivateRoute";
 import SingleToy from "../Pages/SignleToy/SingleToy";
-import AOS from "../Components/AOS/MyAOS";
+import RequestCallback from "../Components/RequestCallback/RequestCallback";
 
 const Router = createBrowserRouter([
   {
@@ -77,8 +77,8 @@ const Router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/aos",
-        element: <AOS></AOS>,
+        path: "/req",
+        element: <RequestCallback></RequestCallback>,
       },
     ],
   },

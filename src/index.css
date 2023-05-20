@@ -195,3 +195,39 @@ main {
   cursor: pointer;
 }
 /* CARD */
+
+/* REQUESTCALL */
+.req-rom {
+  width: 800px;
+  margin: 50px auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.req-rom label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.req-rom input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.req-rom button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.req-rom button:hover {
+  background-color: #0056b3;
+}
+/* REQUESTCALL */
