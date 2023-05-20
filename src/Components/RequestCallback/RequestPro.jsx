@@ -13,7 +13,7 @@ const RequestPro = () => {
     const email = form.email.value;
     const phone = form.phone.value;
     const newMessage = { name, email, phone };
-
+    e.target.reset("");
     fetch("https://alive-baby-server.vercel.app/message", {
       method: "POST",
       headers: {

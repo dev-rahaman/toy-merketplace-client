@@ -80,52 +80,54 @@ const MyToys = () => {
       >
         Descending
       </button>
-      <table>
-        <tr>
-          <th>#</th>
-          <th>Seller Name </th>
-          <th>Toy Name</th>
-          <th>Sub-category</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th style={{ textAlign: "center" }}>Action</th>
-        </tr>
-        {emailData &&
-          emailData.map((toy, idx) => (
-            <>
-              <tr>
-                <td>{idx + 1}</td>
-                <td>{toy.sellerName}</td>
-                <td>{toy.name}</td>
-                <td>{toy.subcategory}</td>
-                <td>{toy.price}</td>
-                <td>{toy.quantity}</td>
-                <td style={{ textAlign: "center" }}>
-                  <FaTrash
-                    onClick={() => handleDelete(toy._id)}
-                    style={{
-                      width: "20px",
-                      height: "30px",
-                      color: "#ef8d8d",
-                      marginRight: "20px",
-                      cursor: "pointer",
-                    }}
-                  />
-                  <Link to={`/updatetoy/${toy._id}`}>
-                    <FaEdit
+      <div className="table-container">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Seller Name </th>
+            <th>Toy Name</th>
+            <th>Sub-category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th style={{ textAlign: "center" }}>Action</th>
+          </tr>
+          {emailData &&
+            emailData.map((toy, idx) => (
+              <>
+                <tr>
+                  <td>{idx + 1}</td>
+                  <td>{toy.sellerName}</td>
+                  <td>{toy.name}</td>
+                  <td>{toy.subcategory}</td>
+                  <td>{toy.price}</td>
+                  <td>{toy.quantity}</td>
+                  <td style={{ textAlign: "center" }}>
+                    <FaTrash
+                      onClick={() => handleDelete(toy._id)}
                       style={{
-                        width: "25px",
+                        width: "20px",
                         height: "30px",
-                        color: "#139EF8",
+                        color: "#ef8d8d",
+                        marginRight: "20px",
                         cursor: "pointer",
                       }}
                     />
-                  </Link>
-                </td>
-              </tr>
-            </>
-          ))}
-      </table>
+                    <Link to={`/updatetoy/${toy._id}`}>
+                      <FaEdit
+                        style={{
+                          width: "25px",
+                          height: "30px",
+                          color: "#139EF8",
+                          cursor: "pointer",
+                        }}
+                      />
+                    </Link>
+                  </td>
+                </tr>
+              </>
+            ))}
+        </table>
+      </div>
     </div>
   );
 };

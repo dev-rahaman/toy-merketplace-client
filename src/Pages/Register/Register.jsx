@@ -5,47 +5,47 @@ import "./RegisterLogin.css";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import useTitle from "../../Components/Title/Title";
+import { toast } from "react-toastify";
 
 const Register = () => {
+  useTitle("Register");
   const [showPass, setShowPass] = useState("password");
   const [error, setError] = useState("");
   const { user, createUser, updateUser } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  useTitle("Register");
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
   const handleRegisterFormSubmit = (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
     let email = e.target.email.value;
     const password = e.target.password.value;
     const confirm = e.target.confirm.value;
-    const firstName = e.target.firstName.value;
-    const lastName = e.target.lastName.value;
-    const photo = e.target.photo.value;
-    const fullName = firstName + lastName;
+    const photoURL = e.target.photoURL.value;
     e.target.reset("");
 
     if (password !== confirm) {
-      setError("invalid confirm password");
+      setError("Your password not match try again");
       return;
     }
     if (password.length < 8) {
-      setError("password must have an 8 character ");
+      setError("Password must contain 8 characters");
       return;
     } else if (!/(?=.*[A-Z])/.test(password)) {
-      setError("password have an uppercase");
+      setError("The password contains an uppercase letter");
       return;
     } else if (!/(?=.*[a-z])/.test(password)) {
-      setError("password have an lowercase ");
+      setError("The password contains a lowercase letter");
       return;
     } else if (!/(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>?])/.test(password)) {
-      setError("password have an at least one special character");
+      setError("The password has at least one special character");
       return;
     } else if (!/(?=.*\d)/.test(password)) {
-      setError("password have an at least one digit");
+      setError("Password has at least one number");
       return;
     }
     setError("");
@@ -53,11 +53,11 @@ const Register = () => {
     createUser(email, password).then((result) => {
       const currentUser = result.user;
       updateProfile(currentUser, {
-        displayName: fullName,
-        photoURL: photo,
+        displayName: name,
+        photoURL: photoURL,
       })
         .then(() => {
-          //   toast.success("your account is crated successfully!");
+          toast.success("your account is crated successfully!");
           navigate(from, { replace: true });
         })
         .catch((error) => {
@@ -76,7 +76,7 @@ const Register = () => {
       <h1>Please Create an Account</h1>
       <form onSubmit={handleRegisterFormSubmit}>
         <label>First Name:</label>
-        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="name" placeholder="Name" required />
         <br />
         <label>Email:</label>
         <input type="email" name="email" placeholder="Enter Email" required />
@@ -124,7 +124,7 @@ const Register = () => {
         />
         <br />
         <label>Photo URL</label>
-        <input type="text" name="photo" placeholder="Photo URL" required />
+        <input type="text" name="photoURL" placeholder="Photo URL" required />
         <br />
         <button type="submit">Register</button>
         <p style={{ textAlign: "center" }}>

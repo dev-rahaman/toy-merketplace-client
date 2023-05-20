@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import { AuthContext } from "../../Provider/AuthProvider";
+import logout from "../../../public/logout.svg";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +13,11 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   const { user, logOut } = useContext(AuthContext);
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleHoverOutside = (event) => {
       if (
         containerRef.current &&
         !containerRef.current.contains(event.target)
@@ -25,16 +26,12 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("click", handleClickOutside);
+    window.addEventListener("mouseover", handleHoverOutside);
 
     return () => {
-      window.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("mouseover", handleHoverOutside);
     };
   }, [containerRef]);
-
-  // const handleMenuClick = () => {
-  //   setIsMenuOpen(!isMenuOpen);
-  // };
 
   const handleLogOut = () => {
     logOut()
@@ -51,7 +48,13 @@ const Header = () => {
           </Link>
         </div>
         <button className="menu__toggle" onClick={toggleMenu}>
-          {isOpen ? "X " : "menu"}
+          {isOpen ? (
+            "X"
+          ) : (
+            <>
+              <FaBars />
+            </>
+          )}
         </button>
         <ul className={`menu__list ${isOpen ? "menu__list--open" : ""}`}>
           <li className="menu__item">
@@ -65,7 +68,7 @@ const Header = () => {
           </li>
           <li className="menu__item">
             <Link to="/addtoy">Add A Toy</Link>
-          </li>{" "}
+          </li>
           {user ? (
             <>
               <li className="menu__item">
@@ -82,6 +85,7 @@ const Header = () => {
                     height: "40px",
                     borderRadius: "50px",
                     cursor: "pointer",
+                    margin: "0 20px",
                   }}
                 />
                 {hover && (
@@ -114,21 +118,7 @@ const Header = () => {
                     justifyContent: "center",
                   }}
                 >
-                  {" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    style={{ width: "20px" }}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
-                    />
-                  </svg>
+                  <img src={logout} alt="logout" style={{ width: "20px" }} />
                   Log Out
                 </button>
               </span>

@@ -104,7 +104,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p style={{ textAlign: "center" }}>© 2023 [Your Company Name]</p>
+        <p style={{ textAlign: "center", backgroundColor: "#F7F7F7" }}>
+          © 2023 [ALIVE BABY]
+        </p>
       </footer>
     </>
   );

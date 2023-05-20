@@ -272,7 +272,9 @@ main {
 }
 
 /* AOS */
+/* MY-TOY-CONTAINER */
 
+/* MY-TOY-CONTAINER */
 /* ======================================================================= */
 @media screen and (max-width: 768px) {
   /* FORM  */
@@ -280,15 +282,33 @@ main {
     width: 80%;
   }
   /* FORM  */
+
+  /* AOS  */
   .AOS-left {
     display: block;
     height: auto;
     padding-bottom: 50px;
   }
-
   .AOS-right {
     display: block;
     height: auto;
     padding-top: 50px;
   }
+  /* AOS  */
+
+  /* SINGLE-TOY-DETAILS */
+  .single-toy-details {
+    display: block;
+  }
+  .single-toy-details-right {
+    width: auto;
+  }
+  .single-toy-details-left {
+    width: auto;
+  }
+  .single-toy-details-left img {
+    width: auto;
+    border-bottom-color: #007bff;
+  }
+  /* SINGLE-TOY-DETAILS */
 }
