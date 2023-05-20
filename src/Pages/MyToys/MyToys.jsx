@@ -18,6 +18,24 @@ const MyToys = () => {
       .then((data) => setEmailData(data));
   }, [url]);
 
+  const handleAscending = () => {
+    fetch("https://alive-baby-server.vercel.app/ascending")
+      .then((res) => res.json())
+      .then((data) => {
+        setEmailData(data);
+        console.log(data);
+      });
+  };
+
+  const handleDescending = () => {
+    fetch("https://alive-baby-server.vercel.app/descending")
+      .then((res) => res.json())
+      .then((data) => {
+        setEmailData(data);
+        console.log(data);
+      });
+  };
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -45,23 +63,26 @@ const MyToys = () => {
     });
   };
 
-  const handleSorting = () => {
-    console.log("ASCENDING AND DESCENDING");
-  };
-
   return (
     <div>
       <h2 style={{ textAlign: "center", fontSize: "40px", marginTop: "30px" }}>
         My Toys
       </h2>
       <button
-        onClick={handleSorting}
+        onClick={handleAscending}
         style={{ fontSize: "20px", padding: "10px" }}
       >
-        Sort
+        Ascending
+      </button>
+      <button
+        onClick={handleDescending}
+        style={{ fontSize: "20px", padding: "10px" }}
+      >
+        Descending
       </button>
       <table>
         <tr>
+          <th>#</th>
           <th>Seller Name </th>
           <th>Toy Name</th>
           <th>Sub-category</th>
@@ -70,9 +91,10 @@ const MyToys = () => {
           <th style={{ textAlign: "center" }}>Action</th>
         </tr>
         {emailData &&
-          emailData.map((toy) => (
+          emailData.map((toy, idx) => (
             <>
               <tr>
+                <td>{idx + 1}</td>
                 <td>{toy.sellerName}</td>
                 <td>{toy.name}</td>
                 <td>{toy.subcategory}</td>

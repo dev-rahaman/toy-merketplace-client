@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ProgrammableContent from "../ProgrammableContent/ProgrammableContent";
 import TransformableContent from "../Transformable/TransformableContent";
 import EducationalContent from "../EducationalContent/EducationalContent";
+import { FaApplePay } from "react-icons/fa";
 
 const Tabs = () => {
   const [toys, setToys] = useState([]);
