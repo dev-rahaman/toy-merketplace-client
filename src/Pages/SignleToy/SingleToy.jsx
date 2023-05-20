@@ -7,8 +7,17 @@ import useTitle from "../../Components/Title/Title";
 const SingleToy = () => {
   useTitle("Single Toy");
   const loadData = useLoaderData();
-  const { toyPhoto, sellerName, email, price, rating, quantity, description } =
-    loadData;
+  const {
+    toyPhoto,
+    sellerName,
+    name,
+    email,
+    price,
+    rating,
+    quantity,
+    description,
+  } = loadData;
+  console.log(loadData);
   return (
     <div>
       <div className="single-toy-details">
@@ -16,18 +25,22 @@ const SingleToy = () => {
           <img src={toyPhoto} alt="" width={"500px"} height={"350px"} />
         </div>
         <div className="single-toy-details-right">
+          <h2>
+            <b>Toy Name: </b> {name}
+          </h2>
           <p className="fontSize">
             <b>Seller Name:</b> {sellerName}
           </p>
           <p className="fontSize">
-            <b>Email</b> {email}
+            <b>Email: </b> {email}
           </p>
+
           <div className="fontSize">
             <FaDollarSign />
             {price}
           </div>
           <p className="fontSize">
-            <b>Quantity</b> {quantity}
+            <b>Quantity: </b> {quantity}
           </p>
 
           <span

@@ -47,10 +47,10 @@ const AllToys = () => {
             placeholder="Search By Toy Name"
             name="search"
             required
-            style={{ padding: "20px", fontSize: "20px", width: "40    0px" }}
+            style={{ padding: "10px", fontSize: "15px", width: "20rem" }}
           />
           <button
-            style={{ padding: "20px", fontSize: "20px", cursor: "pointer" }}
+            style={{ padding: "10px", fontSize: "15px", cursor: "pointer" }}
           >
             Search
           </button>
@@ -72,11 +72,11 @@ const AllToys = () => {
             <>
               <tr>
                 <td>{idx + 1}</td>
-                <td>{toy.sellerName}</td>
-                <td>{toy.name}</td>
-                <td>{toy.subcategory}</td>
-                <td>{toy.price}</td>
-                <td>{toy.quantity}</td>
+                <td>{toy?.sellerName}</td>
+                <td>{toy?.name}</td>
+                <td>{toy?.subcategory}</td>
+                <td>{toy?.price}</td>
+                <td>{toy?.quantity}</td>
                 <td>
                   <Link to={`/toy/${toy._id}`}>
                     <button
