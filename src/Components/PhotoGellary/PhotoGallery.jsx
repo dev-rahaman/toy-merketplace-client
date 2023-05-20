@@ -11,6 +11,9 @@ const PhotoGallery = () => {
 
   return (
     <div>
+      <h2 style={{ fontSize: "40px", textAlign: "center", marginTop: "20px" }}>
+        Photo Gallery
+      </h2>
       <div className="image-gallery">
         {gallery.map((image, idx) => (
           <img key={idx} src={image.toyPhoto} alt={image.alt} />

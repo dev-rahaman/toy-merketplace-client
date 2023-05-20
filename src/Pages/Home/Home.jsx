@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div>
       <Slider></Slider>
-      <PhotoGallery></PhotoGallery>
       <Tabs></Tabs>
+      <PhotoGallery></PhotoGallery>
       <MyAOS></MyAOS>
     </div>
   );

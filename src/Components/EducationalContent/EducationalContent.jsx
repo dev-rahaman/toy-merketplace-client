@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const EducationalContent = ({ card }) => {
   const { _id, toyPhoto, name, rating, description } = card;
   return (
-    <div className="card">
+    <div className="card" data-aos="fade-left">
       <img src={toyPhoto} alt="" className="card-img" />
       <h3>{name}</h3>
       <p className="rating">{rating}</p>
