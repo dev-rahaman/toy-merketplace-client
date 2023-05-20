@@ -9,7 +9,7 @@
   z-index: 999999;
 }
 .navbar-logo {
-  color: #f9d72f;
+  color: #fff;
 }
 .menu__logo {
   font-size: 2rem;
@@ -25,7 +25,7 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #f9cb2d;
+  color: #fff;
 }
 
 .menu__list {
@@ -44,7 +44,7 @@
 ul li a {
   text-decoration: none;
   font-size: 20px;
-  color: #f9cb2d;
+  color: #fff;
 }
 
 .btnMenu button {
@@ -59,8 +59,8 @@ ul li a {
 
 .positionONe {
   position: absolute;
-  background-color: #f9cb2d;
-  color: #000;
+  background-color: #fff;
+  color: #02162f;
   border-radius: 10px;
   padding: 10px;
   width: 350px;

@@ -68,18 +68,14 @@ const MyToys = () => {
       <h2 style={{ textAlign: "center", fontSize: "40px", marginTop: "30px" }}>
         My Toys
       </h2>
-      <button
-        onClick={handleAscending}
-        style={{ fontSize: "20px", padding: "10px" }}
-      >
-        Ascending
-      </button>
-      <button
-        onClick={handleDescending}
-        style={{ fontSize: "20px", padding: "10px" }}
-      >
-        Descending
-      </button>
+      <div className="my-toys-button-container">
+        <button className="ascending" onClick={handleAscending}>
+          Show Low Price
+        </button>
+        <button onClick={handleDescending} className="ascending">
+          Show High Price
+        </button>
+      </div>
       <div className="table-container">
         <table>
           <tr>
@@ -117,7 +113,7 @@ const MyToys = () => {
                         style={{
                           width: "25px",
                           height: "30px",
-                          color: "#139EF8",
+                          color: "#02162F",
                           cursor: "pointer",
                         }}
                       />

@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import { AuthContext } from "../../Provider/AuthProvider";
-import logout from "../../../public/logout.svg";
+import logout from "../../../public/logout.png";
 import { FaBars } from "react-icons/fa";
 
 const Header = () => {
@@ -107,7 +107,7 @@ const Header = () => {
               >
                 <button
                   to="/login"
-                  className="navbar-item"
+                  className="navbar-item ascending"
                   style={{
                     padding: "10px",
                     borderRadius: "10px",
@@ -118,7 +118,11 @@ const Header = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <img src={logout} alt="logout" style={{ width: "20px" }} />
+                  <img
+                    src={logout}
+                    alt="logout"
+                    style={{ width: "20px", marginRight: "5px" }}
+                  />
                   Log Out
                 </button>
               </span>

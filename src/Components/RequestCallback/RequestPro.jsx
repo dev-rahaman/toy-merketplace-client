@@ -72,7 +72,9 @@ const RequestPro = () => {
             defaultValue={user?.phoneNumber}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="ascending">
+          Submit
+        </button>
       </form>
     </>
   );

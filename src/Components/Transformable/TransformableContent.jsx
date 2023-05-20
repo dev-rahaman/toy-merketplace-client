@@ -28,13 +28,19 @@ const TransformableContent = ({ card }) => {
   };
 
   return (
-    <div className="card" data-aos="fade-right">
-      <img src={toyPhoto} alt="" className="card-img" />
-      <h3>{name}</h3>
-      <p className="rating">Rating: {rating}</p>
-      <p className="price">Price: {price}</p>
-      <p>{description}</p>
-      <button onClick={handleViewDetails}>View Details</button>
+    <div className="card" data-aos="fade-left">
+      <div>
+        <img src={toyPhoto} alt="" className="card-img" />
+      </div>
+      <div className="card-content">
+        <h3>{name}</h3>
+        <p className="rating">Rating: {rating}</p>
+        <p className="price">Price: {price}</p>
+        <p>{description}</p>
+        <button onClick={handleViewDetails} className="ascending">
+          View Details
+        </button>
+      </div>
     </div>
   );
 };
