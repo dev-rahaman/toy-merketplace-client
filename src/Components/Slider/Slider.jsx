@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "./Slider.css";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const sliderImages = [
     {
-      image: "https://i.postimg.cc/vZJqSNWy/toy9.jpg",
+      image: "https://i.postimg.cc/YCGDRHL8/toy12.jpg",
     },
     {
-      image: "https://i.postimg.cc/YCGDRHL8/toy12.jpg",
+      image: "https://i.postimg.cc/vZJqSNWy/toy9.jpg",
     },
     {
       image: "https://i.postimg.cc/sgKpMHMx/toy8.webp",

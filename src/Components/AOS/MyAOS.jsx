@@ -3,10 +3,9 @@ import React from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import "aos/dist/aos.js";
-// import man from "../../../public/man.png";
 import robot2 from "../../../public/robot2.png";
 import banner3 from "../../../public/banner3.png";
-import catrobote from "../../../public/cat-robote.png";
+
 AOS.init();
 
 const polygonClipPath = "polygon(0 0, 100% 0, 100% 92%, 0 100%)";

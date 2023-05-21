@@ -73,7 +73,6 @@ ul li a {
     right: -1px;
   }
   .menu__logo {
-    /* order: 1; */
     font-size: 20px;
     color: #fff;
   }
@@ -96,7 +95,6 @@ ul li a {
   }
 
   .btnMenu {
-    /* order: 4; */
     font-size: 15px;
   }
 

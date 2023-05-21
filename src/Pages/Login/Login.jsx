@@ -32,22 +32,10 @@ const Login = () => {
       });
   };
 
-  // const handleGoogleSignIn = () => {
-  //   GoogleSignIn()
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //     })
-  //     .then((error) => {
-  //       console.log(error.message);
-  //     });
-  // };
-
   const handleGoogleSignIn = () => {
     GoogleSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        // toast.success("Login successfully!");
         console.log(loggedUser);
         navigate(from, { replace: true });
       })

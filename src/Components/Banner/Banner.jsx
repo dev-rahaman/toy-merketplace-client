@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-// import banner from "../../../public/Banner-Robot.png";
 import bannerbotot2 from "../../../public/benner-robot2.png";
 import "./Banner.css";
 import TextSlider from "../TextSlider/TextSlider";

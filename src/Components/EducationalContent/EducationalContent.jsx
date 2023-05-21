@@ -3,7 +3,6 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-// import { FcRating } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 import Swal from "sweetalert2";
 

@@ -17,7 +17,7 @@ const SingleToy = () => {
     quantity,
     description,
   } = loadData;
-  // console.log(loadData);
+
   return (
     <div>
       <div className="single-toy-details">

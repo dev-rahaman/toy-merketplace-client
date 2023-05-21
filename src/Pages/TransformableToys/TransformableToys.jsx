@@ -19,7 +19,7 @@ const TransformableToys = () => {
   console.log(result);
   return (
     <div>
-      <h2 className="heading-blog">Transformable</h2>
+      <h2 className="heading-blog">All Transformable Toys</h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
           <TransformableContent key={idx} card={card}></TransformableContent>

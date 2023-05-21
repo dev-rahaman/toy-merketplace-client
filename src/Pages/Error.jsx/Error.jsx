@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-// import error = "../../../public/error.gif"
 import { Link } from "react-router-dom";
 import error from "../../../public/error.gif";
 import useTitle from "../../Components/Title/Title";

@@ -12,7 +12,6 @@
 .Banner-left {
   width: 50%;
   color: #fff;
-  /* background-color: red; */
 }
 
 .banner-left-heading {
@@ -29,7 +28,6 @@
 /* ================= right =============== */
 .Banner-right {
   text-align: center;
-  /* background-color: yellow; */
 }
 .banner-img {
   width: 600px;

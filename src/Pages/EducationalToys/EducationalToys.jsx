@@ -19,7 +19,7 @@ const EducationalToys = () => {
   console.log(result);
   return (
     <div>
-      <h2 className="heading-blog">Educational</h2>
+      <h2 className="heading-blog">All Educational Toys </h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
           <EducationalContent key={idx} card={card}></EducationalContent>

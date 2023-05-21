@@ -38,7 +38,7 @@ tr:first-child:hover {
   color: #02162f;
   background-color: #2fc8df;
 }
-
+/* table end */
 /* SPINNER */
 :root {
   --hue: 223;
@@ -66,7 +66,6 @@ main {
   animation-name: worm2;
 }
 
-/* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: hsl(var(--hue), 90%, 5%);
@@ -219,7 +218,7 @@ main {
 }
 /* CARD */
 
-/* REQUESTCALL */
+/* REQUEST A PRO SELLER */
 .req-rom {
   width: 50%;
   margin: 50px auto;
@@ -247,14 +246,12 @@ main {
   border: 1px solid #36e0f7;
 }
 
-/* ======= */
-
 .req-rom button:hover {
   background-color: #073453;
 }
 /* REQUEST A PRO SELLER */
 
-/* AOS */
+/* AOS  PACK*/
 .AOS-left {
   display: flex;
   align-items: center;
@@ -292,7 +289,8 @@ main {
   overflow-x: hidden;
 }
 
-/* AOS */
+/* AOS  PACK*/
+
 /* MY-TOY-CONTAINER */
 .ascending {
   font-size: 20px;
@@ -333,6 +331,7 @@ main {
   top: 89%;
   left: 40%;
 }
+/* ERROR */
 
 /* BLOG  */
 .blog-container {
@@ -352,8 +351,8 @@ main {
   margin-top: 15px;
 }
 /* BLOG  */
-/* ERROR */
-/* ======================================================================= */
+
+/* ===================================== Media ================================== */
 @media screen and (max-width: 768px) {
   /* FORM  */
   .req-rom {
