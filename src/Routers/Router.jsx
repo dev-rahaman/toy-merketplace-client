@@ -18,6 +18,7 @@ import TextSlider from "../Components/TextSlider/TextSlider";
 import ProgrammableToys from "../Pages/ProgrammableToys/ProgrammableToys";
 import TransformableToys from "../Pages/TransformableToys/TransformableToys";
 import EducationalToys from "../Pages/EducationalToys/EducationalToys";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const Router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const Router = createBrowserRouter([
       {
         path: "/educational",
         element: <EducationalToys></EducationalToys>,
+      },
+      {
+        path: "/contactus",
+        element: <ContactUs></ContactUs>,
       },
     ],
   },
