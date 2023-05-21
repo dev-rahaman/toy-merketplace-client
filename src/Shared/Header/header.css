@@ -37,14 +37,11 @@
   padding: 0;
 }
 
-.menu__item {
-  margin-left: 2rem;
-}
-
 ul li a {
   text-decoration: none;
   font-size: 20px;
   color: #fff;
+  margin: 15px;
 }
 
 .btnMenu button {
@@ -59,13 +56,16 @@ ul li a {
 
 .positionONe {
   position: absolute;
-  background-color: #fff;
-  color: #02162f;
+  background-color: #02162f;
+  color: #fcfcfc;
   border-radius: 10px;
   padding: 10px;
   width: 350px;
   right: 0;
   z-index: 999;
+  box-shadow: -1px 3px 20px 7px rgba(16, 66, 102, 0.75);
+  -webkit-box-shadow: -1px 3px 20px 7px rgba(16, 66, 102, 0.75);
+  -moz-box-shadow: -1px 3px 20px 7px rgba(16, 66, 102, 0.75);
 }
 
 @media screen and (max-width: 768px) {

@@ -6,9 +6,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const ProgrammableContent = ({ card }) => {
+  const { _id, toyPhoto, name, price, rating, description } = card;
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  const { _id, toyPhoto, name, price, rating, description } = card;
 
   const handleViewDetails = () => {
     if (user) {

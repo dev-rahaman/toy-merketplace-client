@@ -6,6 +6,9 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaLocationArrow,
+  FaMapMarkerAlt,
+  FaPhone,
   FaPinterest,
   FaTwitter,
 } from "react-icons/fa";
@@ -19,40 +22,13 @@ const Footer = () => {
             <Link to="/">
               <h4>BABY ALIVE</h4>
             </Link>
-            <p style={{ fontSize: "20px" }}>
-              Explore a world of fun and learning with our delightful baby toys.
-              Designed to captivate young minds and promote early development,
-              our colorful and interactive collection is a must-have for every
-              little explorer.
+            <p style={{ fontSize: "20px", marginBottom: "20px" }}>
+              Explore a world of fun and learning with our delightful baby
+              toys...
             </p>
-          </div>
-          <div className="footer-column">
-            <h4>Contact Information</h4>
-            <div>
-              <ul>
-                <li>
-                  <a href="mailto:rsabdurrahamansultnay@gmail.com">
-                    Email: [rsabdurrahamansultany@gmail.com]
-                  </a>
-                </li>
-                <li>
-                  {/* <a href="tel:01601313258@gmail.com">Phone: [01601313258]</a> */}
-                  <a href="tel:01601313258">Phone: [01601313258]</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-column">
-            <h4>Address</h4>
-            <div>
-              <p>Kaneshtala Sadar Dakhshin Comilla</p>
-            </div>
-          </div>
-          <div className="footer-column">
-            <h4>Social</h4>
             <div className="social">
-              <a
-                href="https://www.linkedin.com/in/rsabdurrahamansultany/"
+              <Link
+                to="https://www.linkedin.com/in/rsabdurrahamansultany/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -60,51 +36,112 @@ const Footer = () => {
                   style={{
                     width: "30px",
                     height: "30px",
-                    color: "#0077B5",
                   }}
                 />
-              </a>
-              <a
-                href="https://twitter.com/rs_rahaman_"
+              </Link>
+              <Link
+                to="https://twitter.com/rs_rahaman_"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTwitter
-                  style={{ width: "30px", height: "30px", color: "#1D9BF0" }}
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/rsabdurrahamansultany"
+                <FaTwitter style={{ width: "30px", height: "30px" }} />
+              </Link>
+              <Link
+                to="https://www.facebook.com/rsabdurrahamansultany"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebook
-                  style={{ width: "30px", height: "30px", color: "#139EF8" }}
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/rsabdurrahamansultany/"
+                <FaFacebook style={{ width: "30px", height: "30px" }} />
+              </Link>
+              <Link
+                to="https://www.instagram.com/rsabdurrahamansultany/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram
-                  style={{ width: "30px", height: "30px", color: "#8C40AA" }}
-                />
-              </a>
-              <br />
-              <a
-                href="https://www.pinterest.com/rsabdurrahamansultany"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaPinterest
-                  style={{ width: "30px", height: "30px", color: "#B7081B" }}
-                />
-              </a>
+                <FaInstagram style={{ width: "30px", height: "30px" }} />
+              </Link>
             </div>
           </div>
+          <div className="footer-column">
+            <h4>Useful Links</h4>
+            <div>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="#">About</Link>
+                </li>
+                <li>
+                  <Link to="#">Services</Link>
+                </li>
+                <li>
+                  <Link to="#">Contact Us</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-column">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <Link to="/programmable">Programmable Toys</Link>
+              </li>
+              <li>
+                <Link to="/transformable">Transformable Toys</Link>
+              </li>
+              <li>
+                <Link to="/educational">Educational Toys</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <h4>Contact Information</h4>
+            <ul>
+              <li>
+                <Link to="tel:01601313258">
+                  <FaPhone style={{ marginRight: "5px" }} />
+                  01601313258
+                </Link>
+              </li>
+              <li>
+                <Link to="mailto:rsabdurrahamansultany2@gamil.com">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 1024 1024"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ marginRight: "5px" }}
+                  >
+                    <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z" />
+                  </svg>
+                  rsrahaman@gamil.com
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://www.google.com/maps/place/Kanesh+Tala+High+School/@23.4136204,91.2595696,17.25z/data=!4m6!3m5!1s0x375381a52f096163:0x473c4efd418d3da7!8m2!3d23.4136335!4d91.2621906!16s%2Fg%2F11c2kgx6g7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaMapMarkerAlt style={{ marginRight: "5px" }} />
+                  Comilla Bangladesh
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p style={{ textAlign: "center", backgroundColor: "#F7F7F7" }}>
+        <p
+          style={{
+            fontSize: "20px",
+            textAlign: "center",
+            color: "#fff",
+            paddingBottom: "20px",
+          }}
+        >
           © 2023 [ALIVE BABY]
         </p>
       </footer>

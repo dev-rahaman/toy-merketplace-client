@@ -15,6 +15,9 @@ import PrivateRoute from "./PrivateRoute";
 import SingleToy from "../Pages/SignleToy/SingleToy";
 import Banner from "../Components/Banner/Banner";
 import TextSlider from "../Components/TextSlider/TextSlider";
+import ProgrammableToys from "../Pages/ProgrammableToys/ProgrammableToys";
+import TransformableToys from "../Pages/TransformableToys/TransformableToys";
+import EducationalToys from "../Pages/EducationalToys/EducationalToys";
 
 const Router = createBrowserRouter([
   {
@@ -84,6 +87,18 @@ const Router = createBrowserRouter([
       {
         path: "/textslider",
         element: <TextSlider></TextSlider>,
+      },
+      {
+        path: "/programmable",
+        element: <ProgrammableToys></ProgrammableToys>,
+      },
+      {
+        path: "/transformable",
+        element: <TransformableToys></TransformableToys>,
+      },
+      {
+        path: "/educational",
+        element: <EducationalToys></EducationalToys>,
       },
     ],
   },

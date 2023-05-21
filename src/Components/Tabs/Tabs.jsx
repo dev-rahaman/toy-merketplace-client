@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import ProgrammableContent from "../ProgrammableContent/ProgrammableContent";
-import TransformableContent from "../Transformable/TransformableContent";
+import TransformableContent from "../TransformableContent/TransformableContent";
 import EducationalContent from "../EducationalContent/EducationalContent";
-import { FaApplePay } from "react-icons/fa";
 
 const Tabs = () => {
   const [toys, setToys] = useState([]);
