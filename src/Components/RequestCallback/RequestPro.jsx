@@ -38,7 +38,7 @@ const RequestPro = () => {
 
   return (
     <>
-      <h2 style={{ fontSize: "40px", textAlign: "center", marginTop: "20px" }}>
+      <h2 className="heading-blog" style={{ fontSize: "50px", margin: "20px" }}>
         Request A Pro Seller
       </h2>
       <form onSubmit={handleMessage} className="req-rom">

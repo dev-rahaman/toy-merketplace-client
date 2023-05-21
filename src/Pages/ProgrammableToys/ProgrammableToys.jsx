@@ -17,7 +17,7 @@ const ProgrammableToys = () => {
   console.log(result);
   return (
     <div>
-      <h2>Transformable</h2>
+      <h2 className="heading-blog">Programmable</h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
           <TransformableContent key={idx} card={card}></TransformableContent>

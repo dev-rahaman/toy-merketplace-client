@@ -148,7 +148,15 @@ main {
 .single-toy-details-left {
   width: 500px;
   margin-left: 40px;
+  height: 350px;
 }
+
+.single-toy-details-left img {
+  margin-left: -70px;
+  height: 300px;
+  width: 500px;
+}
+
 .fontSize {
   font-size: 20px;
   margin-top: 20px;
@@ -377,8 +385,9 @@ main {
     width: auto;
   }
   .single-toy-details-left img {
+    margin-left: -70px;
+    height: 300px;
     width: auto;
-    border-bottom-color: #007bff;
   }
   /* SINGLE-TOY-DETAILS */
 

@@ -17,7 +17,7 @@ const ProgrammableToys = () => {
   console.log(result);
   return (
     <div>
-      <h2>Educational</h2>
+      <h2 className="heading-blog">Educational</h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
           <EducationalContent key={idx} card={card}></EducationalContent>

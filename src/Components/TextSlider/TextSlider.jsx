@@ -38,6 +38,7 @@ const TextSlider = ({ texts }) => {
             backgroundColor: "#293341",
             padding: "10px",
             borderRadius: "50px",
+            cursor: "pointer",
           }}
         >
           <path

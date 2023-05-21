@@ -17,12 +17,12 @@ const SingleToy = () => {
     quantity,
     description,
   } = loadData;
-  console.log(loadData);
+  // console.log(loadData);
   return (
     <div>
       <div className="single-toy-details">
         <div className="single-toy-details-left">
-          <img src={toyPhoto} alt="" width={"500px"} height={"350px"} />
+          <img src={toyPhoto} alt="single image" />
         </div>
         <div className="single-toy-details-right">
           <h2>

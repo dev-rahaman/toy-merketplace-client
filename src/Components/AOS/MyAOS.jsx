@@ -15,9 +15,10 @@ const MyAOS = () => {
     <>
       <div className="AOS-container">
         <h2
-          style={{ fontSize: "40px", textAlign: "center", marginTop: "20px" }}
+          className="heading-blog"
+          style={{ fontSize: "50px", margin: "20px" }}
         >
-          About
+          About Robot Toy
         </h2>
         {/* first */}
         <div
