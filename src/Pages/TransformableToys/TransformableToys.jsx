@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import ProgrammableContent from "../../Components/ProgrammableContent/ProgrammableContent";
 import useTitle from "../../Components/Title/Title";
+import TransformableContent from "../../Components/TransformableContent/TransformableContent";
 
-const ProgrammableToys = () => {
+const TransformableToys = () => {
   useTitle("Transformable");
   const [toys, setToys] = useState([]);
   useEffect(() => {
@@ -15,18 +15,18 @@ const ProgrammableToys = () => {
       });
   }, []);
 
-  const result = toys.filter((n) => n.subcategory == "Programmable");
+  const result = toys.filter((n) => n.subcategory == "Transformable");
   console.log(result);
   return (
     <div>
       <h2 className="heading-blog">Transformable</h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
-          <ProgrammableContent key={idx} card={card}></ProgrammableContent>
+          <TransformableContent key={idx} card={card}></TransformableContent>
         ))}
       </div>
     </div>
   );
 };
 
-export default ProgrammableToys;
+export default TransformableToys;

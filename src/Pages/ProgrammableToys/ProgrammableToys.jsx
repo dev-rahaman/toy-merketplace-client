@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import TransformableContent from "../../Components/TransformableContent/TransformableContent";
 import useTitle from "../../Components/Title/Title";
+import ProgrammableContent from "../../Components/ProgrammableContent/ProgrammableContent";
 
 const ProgrammableToys = () => {
   useTitle("Programmable");
@@ -22,7 +22,7 @@ const ProgrammableToys = () => {
       <h2 className="heading-blog">Programmable</h2>
       <div className="cardFlex">
         {result.map((card, idx) => (
-          <TransformableContent key={idx} card={card}></TransformableContent>
+          <ProgrammableContent key={idx} card={card}></ProgrammableContent>
         ))}
       </div>
     </div>

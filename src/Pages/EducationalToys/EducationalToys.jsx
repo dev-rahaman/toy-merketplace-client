@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import EducationalContent from "../../Components/EducationalContent/EducationalContent";
 import useTitle from "../../Components/Title/Title";
 
-const ProgrammableToys = () => {
+const EducationalToys = () => {
   useTitle("Educational");
   const [toys, setToys] = useState([]);
   useEffect(() => {
@@ -29,4 +29,4 @@ const ProgrammableToys = () => {
   );
 };
 
-export default ProgrammableToys;
+export default EducationalToys;
