@@ -25,7 +25,7 @@ const Tabs = () => {
 
   const Programmable = (
     <div className="cardFlex">
-      {result.slice(0, 4).map((card, idx) => (
+      {result.slice(0, 8).map((card, idx) => (
         <ProgrammableContent key={idx} card={card}></ProgrammableContent>
       ))}
     </div>
@@ -33,7 +33,7 @@ const Tabs = () => {
 
   const Transformable = (
     <div className="cardFlex">
-      {result.slice(0, 4).map((card, idx) => (
+      {result.slice(0, 8).map((card, idx) => (
         <TransformableContent key={idx} card={card}></TransformableContent>
       ))}
     </div>
@@ -41,7 +41,7 @@ const Tabs = () => {
 
   const Educational = (
     <div className="cardFlex">
-      {result.slice(0, 4).map((card, idx) => (
+      {result.slice(0, 8).map((card, idx) => (
         <EducationalContent key={idx} card={card}></EducationalContent>
       ))}
     </div>

@@ -8,13 +8,22 @@ const Slider = () => {
 
   const sliderImages = [
     {
-      image: "https://i.postimg.cc/jqfjpw0r/toy8.jpg",
+      image: "https://i.postimg.cc/vZJqSNWy/toy9.jpg",
     },
     {
-      image: "https://i.postimg.cc/qMd74J46/toy7.jpg",
+      image: "https://i.postimg.cc/YCGDRHL8/toy12.jpg",
     },
     {
-      image: "https://i.postimg.cc/3Jbb2RNd/toy10.jpg",
+      image: "https://i.postimg.cc/sgKpMHMx/toy8.webp",
+    },
+    {
+      image: "https://i.postimg.cc/8C0MHFBV/toy9.jpg",
+    },
+    {
+      image: "https://i.postimg.cc/9MwTNWJw/toy2.jpg",
+    },
+    {
+      image: "https://i.postimg.cc/y8V7fvvF/toy11.webp",
     },
   ];
 
