@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import banner from "../../../public/Banner-Robot.png";
+// import banner from "../../../public/Banner-Robot.png";
+import bannerbotot2 from "../../../public/benner-robot2.png";
 import "./Banner.css";
 import TextSlider from "../TextSlider/TextSlider";
 
@@ -25,7 +26,7 @@ const Banner = () => {
           <TextSlider texts={texts}></TextSlider>
         </div>
         <div data-aos="fade-down" className="Banner-right">
-          <img src={banner} alt="" className="banner-img" />
+          <img src={bannerbotot2} alt="" className="banner-img" />
         </div>
       </div>
     </div>

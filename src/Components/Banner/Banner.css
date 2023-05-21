@@ -28,11 +28,11 @@
 
 /* ================= right =============== */
 .Banner-right {
+  text-align: center;
   /* background-color: yellow; */
 }
 .banner-img {
-  width: 80%;
-  margin-top: 100px;
+  width: 600px;
 }
 .text-slider {
   height: 500px;
@@ -58,6 +58,7 @@
     height: 230px;
   }
   .banner-img {
-    margin-top: -100px;
+    width: auto;
+    margin-left: -50px;
   }
 }

@@ -34,6 +34,20 @@ const Blogs = () => {
       </div>
 
       <div className="blog-container">
+        <h4 className="heading-blog">
+          How do they work and where should we store them on the client-side? in
+          five line
+        </h4>
+        <p className="blog-para">
+          Cookies are small pieces of data stored on the client-side by
+          websites. They work by being sent from the server to the client`s
+          browser and then included in subsequent requests to the same server.
+          They are typically stored as text files on the client`s device, within
+          the browser`s designated cookie storage location.
+        </p>
+      </div>
+      
+      <div className="blog-container">
         <h4 className="heading-blog">Compare SQL and NoSQL databases?</h4>
         <p className="blog-para">
           SQL databases use a structured schema with tables and relationships,

@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import TransformableContent from "../../Components/TransformableContent/TransformableContent";
+import useTitle from "../../Components/Title/Title";
 
 const ProgrammableToys = () => {
+  useTitle("Programmable");
   const [toys, setToys] = useState([]);
   useEffect(() => {
     fetch("https://alive-baby-server.vercel.app/alltoys")

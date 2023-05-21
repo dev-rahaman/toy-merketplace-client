@@ -7,7 +7,7 @@ import EducationalContent from "../EducationalContent/EducationalContent";
 
 const Tabs = () => {
   const [toys, setToys] = useState([]);
-  const [activeTab, setActiveTab] = useState("Programmable");
+  const [activeTab, setActiveTab] = useState("Transformable");
 
   useEffect(() => {
     fetch("https://alive-baby-server.vercel.app/alltoys")
@@ -25,7 +25,7 @@ const Tabs = () => {
 
   const Programmable = (
     <div className="cardFlex">
-      {result.map((card, idx) => (
+      {result.slice(0, 4).map((card, idx) => (
         <ProgrammableContent key={idx} card={card}></ProgrammableContent>
       ))}
     </div>
@@ -33,7 +33,7 @@ const Tabs = () => {
 
   const Transformable = (
     <div className="cardFlex">
-      {result.map((card, idx) => (
+      {result.slice(0, 4).map((card, idx) => (
         <TransformableContent key={idx} card={card}></TransformableContent>
       ))}
     </div>
@@ -41,7 +41,7 @@ const Tabs = () => {
 
   const Educational = (
     <div className="cardFlex">
-      {result.map((card, idx) => (
+      {result.slice(0, 4).map((card, idx) => (
         <EducationalContent key={idx} card={card}></EducationalContent>
       ))}
     </div>
@@ -64,9 +64,7 @@ const Tabs = () => {
             padding: "10px 30px",
           }}
           onClick={() => handleTab("Programmable")}
-          className={
-            activeTab === "Programmable" ? "ActiveTabST" : "tab-button-one"
-          }
+          className={activeTab === "Programmable" ? "ActiveTabST" : ""}
         >
           Programmable
         </button>
@@ -92,7 +90,7 @@ const Tabs = () => {
           onClick={() => handleTab("Educational")}
           className={activeTab === "Educational" ? "ActiveTabST" : ""}
         >
-          Robo Drones
+          Educational
         </button>
       </div>
       <div>
