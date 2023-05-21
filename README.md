@@ -4,7 +4,7 @@
 
 ## The Home page of the website consists of several sections:
 
-1. Banner and slider section: It includes a slider on the left side, displaying relevant content, and a relevant image on the right side.
+- Banner and slider section: It includes a slider on the left side, displaying relevant content, and a relevant image on the right side.
 
 - Images gallery: This section displays relevant images from a MongoDB database, which are added by users on the "Add a Toy" page.
 

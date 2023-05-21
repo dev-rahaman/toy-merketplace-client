@@ -71,7 +71,7 @@ const Slider = () => {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 color: "#fff",
-                backgroundColor: "#293341",
+                backgroundColor: "#073453",
                 padding: "10px",
                 borderRadius: "50px",
               }}
@@ -96,7 +96,7 @@ const Slider = () => {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 color: "#fff",
-                backgroundColor: "#293341",
+                backgroundColor: "#073453",
                 padding: "10px",
                 borderRadius: "50px",
               }}

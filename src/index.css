@@ -325,6 +325,25 @@ main {
   top: 89%;
   left: 40%;
 }
+
+/* BLOG  */
+.blog-container {
+  border: 1px solid #02162f;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.heading-blog {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 25px;
+  color: #073453;
+}
+.blog-para {
+  font-size: 20px;
+  margin-top: 15px;
+}
+/* BLOG  */
 /* ERROR */
 /* ======================================================================= */
 @media screen and (max-width: 768px) {
