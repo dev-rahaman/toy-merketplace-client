@@ -20,6 +20,7 @@ import TransformableToys from "../Pages/TransformableToys/TransformableToys";
 import EducationalToys from "../Pages/EducationalToys/EducationalToys";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Projects from "../Pages/Projects/Projects";
+import SingleBlogs from "../Pages/Blogs/SingleBlogs";
 
 const Router = createBrowserRouter([
   {
@@ -79,6 +80,16 @@ const Router = createBrowserRouter([
         element: <Blogs></Blogs>,
       },
       {
+        path: "/blog/:id",
+        element: (
+          <PrivateRoute>
+            <SingleBlogs></SingleBlogs>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:8080/blog/${params.id}`),
+      },
+      {
         path: "/register",
         element: <Register></Register>,
       },
@@ -109,10 +120,6 @@ const Router = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs></ContactUs>,
-      },
-      {
-        path: "/all-projects",
-        element: <Projects></Projects>,
       },
     ],
   },

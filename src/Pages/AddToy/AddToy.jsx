@@ -61,7 +61,7 @@ const AddToy = () => {
             timer: 1500,
           });
         }
-        console.log("toyData is added", data);
+        // console.log("toyData is added", data);
       });
   };
 

@@ -27,7 +27,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError(error.message);
       });
   };
@@ -36,12 +36,12 @@ const Login = () => {
     GoogleSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
-        console.log(error.message);
+        // console.log(error.message);
       });
   };
   const handleShowPassword = () => {

@@ -44,12 +44,17 @@ ul li a {
   margin: 15px;
 }
 
+ul li a:hover {
+  color: #f93a0b;
+}
+
 .btnMenu button {
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
 }
+
 .positionTwo {
   position: relative;
 }
@@ -72,6 +77,7 @@ ul li a {
   .positionONe {
     right: -1px;
   }
+
   .menu__logo {
     font-size: 20px;
     color: #fff;

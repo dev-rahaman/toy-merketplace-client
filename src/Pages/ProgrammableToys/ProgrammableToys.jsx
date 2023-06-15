@@ -16,7 +16,7 @@ const ProgrammableToys = () => {
   }, []);
 
   const result = toys.filter((n) => n.subcategory == "Transformable");
-  console.log(result);
+  // console.log(result);
   return (
     <div>
       <h2 className="heading-blog">All Programmable Toys</h2>

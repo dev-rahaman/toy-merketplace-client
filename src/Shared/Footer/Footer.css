@@ -39,6 +39,10 @@ footer {
   text-decoration: none;
 }
 
+.footer-column a:hover {
+  color: #ef4136;
+}
+
 .social a {
   display: inline-block;
   width: 50px;
@@ -50,7 +54,8 @@ footer {
   border-radius: 50px;
 }
 .social a:hover {
-  background-color: #17171e;
+  color: #fff;
+  background-color: #ef4136;
 }
 
 @media only screen and (max-width: 767px) {
