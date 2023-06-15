@@ -15,6 +15,7 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   const { user } = useContext(AuthContext);
@@ -67,7 +68,6 @@ const ContactUs = () => {
         <button
           className="ascending"
           style={{
-            color: "#212130",
             fontWeight: "bold",
             backgroundColor: "#2FC8DF",
             width: "200px",
@@ -75,84 +75,93 @@ const ContactUs = () => {
             borderRadius: "50px 50px 50px 0px",
           }}
         >
-          Contact Us
+          <Link
+            to={"mailto: 'rsabdurrahamansultany2@gmail.com'"}
+            state={{ color: "#212130" }}
+          >
+            Contact Us
+          </Link>
         </button>
       </div>
 
-      <div className="Contact-left">
-        <div className="dev-left">
-          <div className="contact-left-container">
-            <div>
-              <FaMapMarkerAlt
-                style={{
-                  fontSize: "80px",
-                  color: "#8ed9ff",
-                  marginRight: "20px",
-                  display: "inline-block",
-                }}
-              />
+      <div className="contact_us_bottom_container">
+        <div className="Contact-left">
+          <div className="dev-left">
+            <div className="contact-left-container">
+              <div>
+                <FaMapMarkerAlt
+                  style={{
+                    fontSize: "80px",
+                    color: "#F93A0B",
+                    marginRight: "20px",
+                    display: "inline-block",
+                  }}
+                />
+              </div>
+              <div style={{ color: "#fff" }}>
+                <h3 style={{ fontSize: "40px" }}>Location:</h3>
+                <p className="blog-para">
+                  Kaneshtala Sadar Dakhshin Comilla Bangladesh
+                </p>
+              </div>
             </div>
-            <div style={{ color: "#fff" }}>
-              <h3 style={{ fontSize: "40px" }}>Location:</h3>
-              <p className="blog-para">
-                Kaneshtala Sadar Dakhshin Comilla Bangladesh
-              </p>
+
+            <div className="contact-left-container">
+              <div>
+                <FaMobileAlt
+                  style={{
+                    fontSize: "80px",
+                    color: "#F93A0B",
+                    marginRight: "20px",
+                    display: "inline-block",
+                  }}
+                />
+              </div>
+              <div style={{ color: "#fff" }}>
+                <h3 style={{ fontSize: "40px" }}>Phone:</h3>
+                <p className="blog-para">
+                  01601313258, 01601313258, 01601313258
+                </p>
+              </div>
+            </div>
+
+            <div className="contact-left-container">
+              <div>
+                <AiOutlineMail
+                  style={{
+                    fontSize: "80px",
+                    color: "#F93A0B",
+                    marginRight: "20px",
+                    display: "inline-block",
+                  }}
+                />
+              </div>
+              <div style={{ color: "#fff" }}>
+                <h3 style={{ fontSize: "40px" }}>Email:</h3>
+                <p className="blog-para">
+                  rsabdurrahamansultany2@gmail.com,
+                  rsabdurrahamansultany3@gmail.com
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="contact-left-container">
-            <div>
-              <FaMobileAlt
-                style={{
-                  fontSize: "80px",
-                  color: "#8ed9ff",
-                  marginRight: "20px",
-                  display: "inline-block",
-                }}
-              />
-            </div>
-            <div style={{ color: "#fff" }}>
-              <h3 style={{ fontSize: "40px" }}>Phone:</h3>
-              <p className="blog-para">01601313258, 01601313258, 01601313258</p>
-            </div>
+          <div className="Contact-right">
+            <form>
+              <label name="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label name="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label name="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+
+              <label name="message">Message:</label>
+              <textarea id="message" name="message" rows="" required></textarea>
+              <input type="submit" value="Submit" className="ascending" />
+            </form>
           </div>
-
-          <div className="contact-left-container">
-            <div>
-              <AiOutlineMail
-                style={{
-                  fontSize: "80px",
-                  color: "#8ed9ff",
-                  marginRight: "20px",
-                  display: "inline-block",
-                }}
-              />
-            </div>
-            <div style={{ color: "#fff" }}>
-              <h3 style={{ fontSize: "40px" }}>Email:</h3>
-              <p className="blog-para">
-                rsabdurrahamansultany2@gmail.com,
-                rsabdurrahamansultany3@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="Contact-right">
-          <form>
-            <label name="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label name="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label name="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required />
-
-            <label name="message">Message:</label>
-            <textarea id="message" name="message" rows="" required></textarea>
-            <input type="submit" value="Submit" className="ascending" />
-          </form>
         </div>
       </div>
     </>

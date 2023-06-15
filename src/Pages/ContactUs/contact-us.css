@@ -35,7 +35,7 @@
 .Contact-right form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .Contact-right label {
@@ -72,4 +72,23 @@
   background-color: #18385f;
   width: 500px;
   height: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Contact-left {
+    flex-direction: column;
+    margin: 50px 0;
+  }
+
+  .dev-left {
+    width: 100%;
+  }
+  .contact-left-container {
+    width: auto;
+  }
+
+  .Contact-right {
+    width: 100%;
+    overflow: hidden;
+  }
 }
