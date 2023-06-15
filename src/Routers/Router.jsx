@@ -51,9 +51,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://alive-baby-server-rs-rahaman.vercel.app/alltoys/${params.id}`
-          ),
+          fetch(`https://alive-baby-server.vercel.app/alltoys/${params.id}`),
       },
       {
         path: "/mytoys",
@@ -71,9 +69,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://alive-baby-server-rs-rahaman.vercel.app/alltoys/${params.id}`
-          ),
+          fetch(`https://alive-baby-server.vercel.app/alltoys/${params.id}`),
       },
       {
         path: "/blogs",
@@ -87,7 +83,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8080/blog/${params.id}`),
+          fetch(`https://alive-baby-server.vercel.app/blog/${params.id}`),
       },
       {
         path: "/register",

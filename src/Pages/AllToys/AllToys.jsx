@@ -9,7 +9,7 @@ const AllToys = () => {
   const [searchText, setSearchText] = useState();
   const [allToy, setAllToy] = useState([]);
   useEffect(() => {
-    fetch("https://alive-baby-server-rs-rahaman.vercel.app/alltoys")
+    fetch("https://alive-baby-server.vercel.app/alltoys")
       .then((res) => res.json())
       .then((data) => {
         setAllToy(data);
@@ -19,9 +19,7 @@ const AllToys = () => {
 
   const handleSearchBtn = (e) => {
     e.preventDefault();
-    fetch(
-      `https://alive-baby-server-rs-rahaman.vercel.app/toySearchByName/${searchText}`
-    )
+    fetch(`https://alive-baby-server.vercel.app/toySearchByName/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         setAllToy(data);

@@ -5,7 +5,7 @@ const PhotoGallery = () => {
   const [gallery, setGallery] = useState([]);
 
   useEffect(() => {
-    fetch("https://alive-baby-server-rs-rahaman.vercel.app/alltoys")
+    fetch("https://alive-baby-server.vercel.app/alltoys")
       .then((res) => res.json())
       .then((data) => setGallery(data));
   }, []);

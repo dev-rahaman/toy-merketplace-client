@@ -8,7 +8,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/blogs")
+    fetch("https://alive-baby-server.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
