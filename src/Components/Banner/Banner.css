@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  background-color: #02162f;
+  background-color: #212130;
   padding: 0 50px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -11,7 +11,7 @@
 
 .Banner-left {
   width: 50%;
-  color: #fff;
+  color: #f93a0b;
 }
 
 .banner-left-heading {

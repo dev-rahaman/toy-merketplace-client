@@ -28,14 +28,14 @@ tr:nth-child(even) {
 }
 tr:nth-child(odd):hover {
   color: #fff;
-  background-color: #073453;
+  background-color: #17171e;
 }
 tr:first-child {
-  color: #02162f;
+  color: #212130;
   background-color: #2fc8df;
 }
 tr:first-child:hover {
-  color: #02162f;
+  color: #212130;
   background-color: #2fc8df;
 }
 /* table end */
@@ -112,7 +112,7 @@ main {
   padding: 10px 25px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #02162f;
+  background-color: #F93A0B;
   color: #fff;
 }
 
@@ -207,7 +207,7 @@ main {
   font-size: 16px;
   display: inline-block;
   color: #fff;
-  background-color: #02162f;
+  background-color: #f93a0b;
   border: none;
   margin-top: 20px;
   padding: 8px 16px;
@@ -238,7 +238,7 @@ main {
   padding: 20px;
   width: 100%;
   padding: 10px;
-  border: 1px solid #02162f;
+  border: 1px solid #212130;
   border-radius: 5px;
   outline: none;
 }
@@ -247,7 +247,7 @@ main {
 }
 
 .req-rom button:hover {
-  background-color: #073453;
+  background-color: #17171e;
 }
 /* REQUEST A PRO SELLER */
 
@@ -256,7 +256,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #02162f;
+  background-color: #212130;
   padding: 20px;
   height: 500px;
 }
@@ -273,7 +273,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #073453;
+  background-color: #17171e;
   padding: 20px;
   height: 500px;
 }
@@ -299,11 +299,11 @@ main {
   cursor: pointer;
   border: none;
   border-radius: 50px;
-  background-color: #02162f;
+  background-color: #f93a0b;
   margin-right: 5px;
 }
 .ascending:hover {
-  background-color: #073453;
+  background-color: #17171e;
 }
 .my-toys-button-container {
   margin-top: 30px;
@@ -335,7 +335,7 @@ main {
 
 /* BLOG  */
 .blog-container {
-  border: 1px solid #02162f;
+  border: 1px solid #212130;
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
@@ -344,7 +344,7 @@ main {
   font-size: 40px;
   text-align: center;
   margin-top: 25px;
-  color: #073453;
+  color: #17171e;
 }
 .blog-para {
   font-size: 20px;

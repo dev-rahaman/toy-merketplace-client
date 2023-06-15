@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #073453;
+  background-color: #17171e;
   position: sticky;
   top: 0px;
   z-index: 999999;
@@ -56,7 +56,7 @@ ul li a {
 
 .positionONe {
   position: absolute;
-  background-color: #02162f;
+  background-color: #f93a0b;
   color: #fcfcfc;
   border-radius: 10px;
   padding: 10px;

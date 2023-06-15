@@ -10,7 +10,7 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState("Transformable");
 
   useEffect(() => {
-    fetch("https://alive-baby-server.vercel.app/alltoys")
+    fetch("https://alive-baby-server-rs-rahaman.vercel.app/alltoys")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);

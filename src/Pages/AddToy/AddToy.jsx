@@ -43,7 +43,7 @@ const AddToy = () => {
       description,
     };
 
-    fetch("https://alive-baby-server.vercel.app/addtoy", {
+    fetch("https://alive-baby-server-rs-rahaman.vercel.app/addtoy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [emailData, setEmailData] = useState([]);
 
-  const url = `https://alive-baby-server.vercel.app/mytoys/${user?.email}`;
+  const url = `https://alive-baby-server-rs-rahaman.vercel.app/mytoys/${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const MyToys = () => {
   }, [url]);
 
   const handleAscending = () => {
-    fetch("https://alive-baby-server.vercel.app/ascending")
+    fetch("https://alive-baby-server-rs-rahaman.vercel.app/ascending")
       .then((res) => res.json())
       .then((data) => {
         setEmailData(data);
@@ -28,7 +28,7 @@ const MyToys = () => {
   };
 
   const handleDescending = () => {
-    fetch("https://alive-baby-server.vercel.app/descending")
+    fetch("https://alive-baby-server-rs-rahaman.vercel.app/descending")
       .then((res) => res.json())
       .then((data) => {
         setEmailData(data);
@@ -47,7 +47,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://alive-baby-server.vercel.app/mytoys/${id}`, {
+        fetch(`https://alive-baby-server-rs-rahaman.vercel.app/mytoys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -113,7 +113,7 @@ const MyToys = () => {
                         style={{
                           width: "25px",
                           height: "30px",
-                          color: "#02162F",
+                          color: "#212130",
                           cursor: "pointer",
                         }}
                       />

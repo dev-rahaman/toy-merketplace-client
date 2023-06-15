@@ -19,6 +19,7 @@ import ProgrammableToys from "../Pages/ProgrammableToys/ProgrammableToys";
 import TransformableToys from "../Pages/TransformableToys/TransformableToys";
 import EducationalToys from "../Pages/EducationalToys/EducationalToys";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import Projects from "../Pages/Projects/Projects";
 
 const Router = createBrowserRouter([
   {
@@ -49,7 +50,9 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://alive-baby-server.vercel.app/alltoys/${params.id}`),
+          fetch(
+            `https://alive-baby-server-rs-rahaman.vercel.app/alltoys/${params.id}`
+          ),
       },
       {
         path: "/mytoys",
@@ -67,7 +70,9 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://alive-baby-server.vercel.app/alltoys/${params.id}`),
+          fetch(
+            `https://alive-baby-server-rs-rahaman.vercel.app/alltoys/${params.id}`
+          ),
       },
       {
         path: "/blogs",
@@ -104,6 +109,10 @@ const Router = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/all-projects",
+        element: <Projects></Projects>,
       },
     ],
   },

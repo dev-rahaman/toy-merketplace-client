@@ -7,22 +7,22 @@ const Slider = () => {
 
   const sliderImages = [
     {
-      image: "https://i.postimg.cc/YCGDRHL8/toy12.jpg",
+      image: "https://i.postimg.cc/zfgLkV34/toy14.jpg",
     },
     {
-      image: "https://i.postimg.cc/vZJqSNWy/toy9.jpg",
+      image: "https://i.postimg.cc/HkJjpV0j/toy18.webp",
     },
     {
-      image: "https://i.postimg.cc/sgKpMHMx/toy8.webp",
+      image: "https://i.postimg.cc/3JtD8sPf/toy19.jpg",
     },
     {
       image: "https://i.postimg.cc/8C0MHFBV/toy9.jpg",
     },
     {
-      image: "https://i.postimg.cc/9MwTNWJw/toy2.jpg",
+      image: "https://i.postimg.cc/BbKnYyDq/6.jpg",
     },
     {
-      image: "https://i.postimg.cc/y8V7fvvF/toy11.webp",
+      image: "https://i.postimg.cc/sfqBYPSj/1.jpg",
     },
   ];
 
@@ -79,7 +79,7 @@ const Slider = () => {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 color: "#fff",
-                backgroundColor: "#073453",
+                backgroundColor: "#17171E",
                 padding: "10px",
                 borderRadius: "50px",
               }}
@@ -104,7 +104,7 @@ const Slider = () => {
               xmlns="http://www.w3.org/2000/svg"
               style={{
                 color: "#fff",
-                backgroundColor: "#073453",
+                backgroundColor: "#17171E",
                 padding: "10px",
                 borderRadius: "50px",
               }}

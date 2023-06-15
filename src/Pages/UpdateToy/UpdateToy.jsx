@@ -57,7 +57,7 @@ const UpdateToy = () => {
     };
 
     // updated data on server
-    fetch(`https://alive-baby-server.vercel.app/updatetoy/${_id}`, {
+    fetch(`https://alive-baby-server-rs-rahaman.vercel.app/updatetoy/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

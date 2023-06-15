@@ -27,7 +27,7 @@ const ContactUs = () => {
     const phone = form.phone.value;
     const newMessage = { name, email, phone };
     e.target.reset("");
-    fetch("https://alive-baby-server.vercel.app/message", {
+    fetch("https://alive-baby-server-rs-rahaman.vercel.app/message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const ContactUs = () => {
         <button
           className="ascending"
           style={{
-            color: "#02162F",
+            color: "#212130",
             fontWeight: "bold",
             backgroundColor: "#2FC8DF",
             width: "200px",
