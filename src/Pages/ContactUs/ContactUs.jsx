@@ -54,7 +54,7 @@ const ContactUs = () => {
       <div className="contact-us-container">
         <h2
           className="heading-blog"
-          style={{ color: "#2FC8DF", fontSize: "70px" }}
+          style={{ color: "#F93A0B", fontSize: "70px" }}
         >
           Contact Us
         </h2>
@@ -69,7 +69,7 @@ const ContactUs = () => {
           className="ascending"
           style={{
             fontWeight: "bold",
-            backgroundColor: "#2FC8DF",
+            backgroundColor: "#F93A0B",
             width: "200px",
             height: "50px",
             borderRadius: "50px 50px 50px 0px",
@@ -92,7 +92,7 @@ const ContactUs = () => {
                 <FaMapMarkerAlt
                   style={{
                     fontSize: "80px",
-                    color: "#F93A0B",
+                    color: "#fff",
                     marginRight: "20px",
                     display: "inline-block",
                   }}
@@ -111,7 +111,7 @@ const ContactUs = () => {
                 <FaMobileAlt
                   style={{
                     fontSize: "80px",
-                    color: "#F93A0B",
+                    color: "#fff",
                     marginRight: "20px",
                     display: "inline-block",
                   }}
@@ -130,7 +130,7 @@ const ContactUs = () => {
                 <AiOutlineMail
                   style={{
                     fontSize: "80px",
-                    color: "#F93A0B",
+                    color: "#fff",
                     marginRight: "20px",
                     display: "inline-block",
                   }}
@@ -146,22 +146,58 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="Contact-right">
-            <form>
+          <form
+            onSubmit={handleMessage}
+            className="req-rom"
+            id="contact-us-form-container"
+          >
+            <div className="form-group">
               <label name="name">Name:</label>
-              <input type="text" id="name" name="name" required />
-
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter Your Name"
+                defaultValue={user?.displayName}
+              />
+            </div>
+            <div className="form-group">
               <label name="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter Your Email"
+                defaultValue={user?.email}
+              />
+            </div>
+            <div className="form-group">
               <label name="phone">Phone:</label>
-              <input type="tel" id="phone" name="phone" required />
-
-              <label name="message">Message:</label>
-              <textarea id="message" name="message" rows="" required></textarea>
-              <input type="submit" value="Submit" className="ascending" />
-            </form>
-          </div>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Enter Your Phone"
+                defaultValue={user?.phoneNumber}
+              />
+            </div>
+            <div className="form-group">
+              <label name="phone">Message:</label>
+              <textarea
+                name="message"
+                id="contact-us-textarea"
+                cols="30"
+                rows="5"
+                placeholder="Message here Optional"
+              ></textarea>
+            </div>
+            <button type="submit" className="ascending">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </>

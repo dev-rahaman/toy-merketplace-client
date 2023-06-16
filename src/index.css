@@ -32,11 +32,11 @@ tr:nth-child(odd):hover {
 }
 tr:first-child {
   color: #212130;
-  background-color: #2fc8df;
+  background-color: #f93a0b;
 }
 tr:first-child:hover {
   color: #212130;
-  background-color: #2fc8df;
+  background-color: #f93a0b;
 }
 /* table end */
 /* SPINNER */
@@ -112,7 +112,7 @@ main {
   padding: 10px 25px;
   font-size: 20px;
   cursor: pointer;
-  background-color: #F93A0B;
+  background-color: #f93a0b;
   color: #fff;
 }
 
@@ -241,9 +241,6 @@ main {
   border: 1px solid #212130;
   border-radius: 5px;
   outline: none;
-}
-.req-rom input:focus {
-  border: 1px solid #36e0f7;
 }
 
 .req-rom button:hover {
